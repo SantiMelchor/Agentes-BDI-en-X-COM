@@ -73,7 +73,7 @@ ultimos = dicc["ultimos"]
 media = dicc["media"]
 plt.plot(primeros, label="Mejor adn", linewidth= 1.5, markersize= 6, color="#1f77b4")
 #plt.plot(moving_average(primeros[:401]), label="Media adn", linewidth= 1.5, markersize= 6, color="#1f77b4")
-#plt.plot(ultimos[:151], label="Ultimo adn", linewidth= 1.5, markersize= 6, color="#ce4d4d")
+#plt.plot(ultimos, label="Ultimo adn", linewidth= 1.5, markersize= 6, color="#ce4d4d")
 plt.xlabel("Generacion", labelpad=8)
 plt.ylabel("Fitness", labelpad=8)
 plt.title("Evolucion genética BDI")
