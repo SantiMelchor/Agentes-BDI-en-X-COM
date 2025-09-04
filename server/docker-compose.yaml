@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  prosody:
+    image: prosody/prosody:latest
+    container_name: prosody
+    restart: always
+    ports:
+      - "5222:5222"
+      - "5280:5280"
+    volumes:
+      - ./prosody.cfg.lua:/etc/prosody/prosody.cfg.lua
+      - ./data:/var/lib/prosody
+      - ./log:/var/log/prosody
+      - ./certs:/etc/prosody/certs
