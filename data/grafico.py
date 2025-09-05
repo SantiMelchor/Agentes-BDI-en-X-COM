@@ -6,12 +6,12 @@ import numpy as np
 
 
 
-with open("listas-10-800.json", "r") as f:
+with open("listas-10-400-parcial.json", "r") as f:
     dicc = json.load(f)
 
 
 
-def moving_average(x, w=10):
+def moving_average(x, w=200):
     return np.convolve(x, np.ones(w), 'valid') / w
 
 res = dicc.get("soluciones")
@@ -73,11 +73,13 @@ ultimos = dicc["ultimos"]
 media = dicc["media"]
 plt.plot(primeros, label="Mejor adn", linewidth= 1.5, markersize= 6, color="#1f77b4")
 #plt.plot(moving_average(primeros[:401]), label="Media adn", linewidth= 1.5, markersize= 6, color="#1f77b4")
-#plt.plot(ultimos, label="Ultimo adn", linewidth= 1.5, markersize= 6, color="#ce4d4d")
+#plt.plot(media, label="Media adn", linewidth= 1.5, markersize= 6,alpha=0.6, color="#ce4d4d")
 plt.xlabel("Generacion", labelpad=8)
 plt.ylabel("Fitness", labelpad=8)
 plt.title("Evolucion genética BDI")
 plt.legend()
+plt.ylim(45,85)
+#plt.xlim(0,12)
 plt.grid(True)
 plt.tight_layout()
 plt.show()

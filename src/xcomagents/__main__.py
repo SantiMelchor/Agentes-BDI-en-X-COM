@@ -92,11 +92,11 @@ def main():
     #PARAMETROS A CAMBIAR PARA LAS SIMULACIONES
     #+++++++++++++++++++++++++++++++++++++++++++
     mejores_a_guardar = 3
-    generations = 1
-    iteraciones = 1
-    individuos_por_gen = 10
-    seed = 42 #Si no se quiere seed poner None
-    filename = "listas-hola.json"
+    generations = 150
+    iteraciones = 10
+    individuos_por_gen = 50
+    seed = None #Si no se quiere seed poner None
+    filename = "listas-50-150-k5-rseed.json"
     #+++++++++++++++++++++++++++++++++++++++++++
 
     #ORQUESTACION
