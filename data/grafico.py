@@ -6,12 +6,12 @@ import numpy as np
 
 
 
-with open("listas-10-400-parcial.json", "r") as f:
+with open("listas-50-150-k5-parcial.json", "r") as f:
     dicc = json.load(f)
 
 
 
-def moving_average(x, w=200):
+def moving_average(x, w=10):
     return np.convolve(x, np.ones(w), 'valid') / w
 
 res = dicc.get("soluciones")
@@ -78,7 +78,7 @@ plt.xlabel("Generacion", labelpad=8)
 plt.ylabel("Fitness", labelpad=8)
 plt.title("Evolucion genética BDI")
 plt.legend()
-plt.ylim(45,85)
+plt.ylim(60,85)
 #plt.xlim(0,12)
 plt.grid(True)
 plt.tight_layout()
